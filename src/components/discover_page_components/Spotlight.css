@@ -1,0 +1,104 @@
+.spotlightmainbody{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+
+.spotlightinfo, .spotlightimage{
+    height: 100%;
+}
+
+.spotlightinfo{
+    width: 40%;
+}
+
+.spotlightimage{
+    width: 60%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.spotlightheader, .spotlightcarname, .spotlightcardescription, .spotlightcarprice, .spotlightcardetailsbuttondiv{
+    width: 100%;
+}
+
+.spotlightheader{
+    height: 10%;
+    font-size: 20px;
+    color: #0052FF;
+}
+.spotlightcarname{
+    height: 29%;
+    font-weight: bold;
+    font-size: 60px;
+}
+
+.spotlightcardescription{
+    height: 24%;
+}
+
+.spotlightcarpricing{
+    display: flex;
+    flex-direction: row;
+    height: 17%;
+    align-items: center;
+    
+}
+
+.spotlightcarsaletype{
+    font-weight: 400;
+    color: #64748B;
+    margin-right: 5px;
+}
+
+.spotlightcarprice{
+    font-weight: 600;
+    font-size: 5vh;
+}
+
+.spotlightcardetailsbuttondiv{
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.spotlightcardetailsbutton{
+    height: 80%;
+    width: 140px;
+    background-color: #0052FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 400;
+    transition: all 0.2s ease;
+}
+
+.spotlightcardetailsbutton:hover{
+    background-color: blue;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.spotlightcarimage{
+    height: 90%;
+    width: 92%;
+    margin-top: 10px;
+    margin-left: 60px;
+    position: absolute;
+    z-index: 1;
+    border-radius: 20px;
+    background-color: red;
+}
+
+.spotlightcarinformation{
+    height: 35%;
+    width: 35%;
+    margin-top: 206px;
+    position: absolute;
+    z-index: 2;
+    background-color: yellow;
+}

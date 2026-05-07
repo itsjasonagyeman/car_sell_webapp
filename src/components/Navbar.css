@@ -6,6 +6,9 @@
     flex-direction: row;
     width: 100vw;
     height: 40px;
+    box-sizing: border-box;
+    background-color: white;
+    z-index: 9999;
 }
 
 .logodiv{
@@ -14,7 +17,9 @@
     font-weight: bold;
     font-size: 20px;
     display: flex;
-    justify-content: center;
+    padding-left: 50px;
+    box-sizing: border-box;
+    justify-content: start;
     align-items: center;
 }
 .pagesdiv{
@@ -27,7 +32,7 @@
 .searchdiv{
     width: 20%;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
 }
 
@@ -38,6 +43,10 @@
     font-size: 20px;
     font-weight: 700;
     transition: all 0.3s ease;
+}
+
+:is(.discovernav, .searchnav, .cartnav):hover{
+    color: #0052FF;
 }
 
 .discovernav.active,

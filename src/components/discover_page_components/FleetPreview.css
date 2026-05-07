@@ -1,0 +1,130 @@
+.fleetpreviewmainbody{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.fleetpreviewbar{
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.fleetpreviewtitle{
+    font-size: 30px;
+    font-weight: 600;
+}
+.fleetpreviewviewall{
+    font-size: 15px;
+    font-weight: 600;
+    color: #64848B
+}
+.fleetpreviewcardsdiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 80%;
+}
+
+.fleetpreviewcard{
+    height: 100%;
+    width: 29vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.fleetpreviewimage{
+    height: 60%;
+    width: 100%;
+    background-color: red;
+}
+
+.fleetpreviewcartype{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 5%;
+    padding-top: 5px;
+}
+
+.fleetpreviewcartypename{
+    color: #0052FF;
+    font-weight: 600;
+}
+
+.fleetpreviewcartypesale{
+    color: #64848B;
+    font-weight: 600;
+}
+
+
+.fleetpreviewcarname{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+}
+.fleetpreviewcartitle{
+    font-weight: 700;
+    font-size: 23px;
+}
+.fleetpreviewcarprice{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+}
+
+.fleetpreviewcarpriceamount{
+    font-weight: 700;
+    font-size: 17px;
+}
+.fleetpreviewcarduration{
+    font-weight: 600;
+    font-size: 14px;
+    color: #64848B;
+}
+.fleetpreviewcarproperties{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-style: solid;
+    border-width: 2px;
+    border-right-color: white;
+    border-left: white;
+    border-top-color: #64848B;
+    border-bottom-color: #64848B;
+    width: 100%;
+    height: 10%;
+}
+
+.fleetpreviewcarproperties div{
+    margin-right: 10px;
+}
+.fleetpreviewdetails{
+    height: 15%;
+    width: 100%;
+}
+
+.fleetpreviewdetailsbutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+    height: 80%;
+    width: 100%;
+    color: black;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    transition: all 0.2s ease;
+}
+
+.fleetpreviewdetailsbutton:hover{
+    background-color: #64848B;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
