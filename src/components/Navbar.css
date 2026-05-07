@@ -9,6 +9,7 @@
     box-sizing: border-box;
     background-color: white;
     z-index: 9999;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.3);
 }
 
 .logodiv{
@@ -65,6 +66,7 @@
     width: 90%;
     padding-left: 10px;
     box-sizing: border-box;
+    border-width: 2px;
     border-style: solid;
     border-color: #64748B;
     transition: all 0.2s ease;

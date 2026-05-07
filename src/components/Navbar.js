@@ -10,7 +10,7 @@ export default function Navbar() {
             <div className='logodiv'>Logo</div>
             <div className='pagesdiv'>
                 <Link to='/discover' className={`discovernav ${isActive('/discover') ? "active" : ""}`}>Discover</Link>
-                <Link to='/search' className={`searchnav ${isActive('/search') ? 'active' : ''}`}>Search</Link>
+                <Link to='/search' className={`searchnav ${isActive('/search') ? 'active' : ''}`}>Explore</Link>
                 <Link to='/cart' className={`cartnav ${isActive('/cart') ? 'active' : ''}`}>Cart</Link>
             </div>
             <div className='searchdiv'>
