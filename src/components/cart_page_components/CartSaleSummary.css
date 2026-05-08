@@ -1,0 +1,93 @@
+.cartoverview{
+    height: 600px;
+    background-color: white;
+    border-color: #64748B;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: 2px 10px 2px 10px rgba(0,0,0,0.3);
+    width: 30%;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.cartsalesummary{
+    font-size: 40px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+
+
+.cartsalepropertyandprice{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.cartsaleproperty, .cartsalevalue{
+    color: #64748B;
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.cartsalefullprice{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.cartsaletotaltitle{
+    font-weight: 400;
+    font-size: 18px;
+    color: #64748B;
+}
+
+.cartsaletotalprice{
+    font-weight: 500;
+    font-size: 40px;
+    color: black;
+}
+
+.proceedtocheckoutbutton{
+    height: 70px;
+    width: 100%;
+    background-color: #0052FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 20px;
+    transition: all 0.2s ease;
+}
+
+.proceedtocheckoutbutton:hover{
+    background-color: blue;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.guaranteecard{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #64748B;
+    height: 100px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.guaranteedsecurity{
+    color: #0052FF;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.datasecurity{
+    color: #64748B;
+    font-weight: 500;
+}
