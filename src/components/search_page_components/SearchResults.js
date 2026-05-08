@@ -56,7 +56,12 @@ export default function SearchResults() {
                 <SearchResultsCarCard/>
                 <SearchResultsCarCard/>
             </div>    
-
+            <div className='changesearchresultsrow'>
+              <div className='changesearchresultnum'>1</div>
+              <div className='changesearchresultnum'>2</div>
+              <div className='changesearchresultnum'>3</div>
+              <div className='changesearchresultnum'>&gt;</div>
+            </div>
         </div>
   )
 }
