@@ -1,0 +1,155 @@
+.searchresults{
+    height: 100%;
+    width: 70%;
+    margin-right: 10px;
+}
+
+.bigsearchbar{
+    height: 80px;
+    width: 99.3%;
+    background-color: white;
+    border-style: solid;
+    border-radius: 1px;
+    border-color: #64748B;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.search{
+    height: 90%;
+    width: 70%;
+    border-color: white;
+}
+
+.sortbytitle{
+    font-weight: 500;
+    font-size: 13px;
+    color: #64748B;
+}
+
+.sortbyprice{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.showingsearchresults{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    height: 40px;
+}
+
+.searchview{
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+}
+
+.tileview, .listview{
+    height: 90%;
+    width: 50px;
+    background-color: white;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #64748B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tileview{
+    margin-right: 5px;
+}
+
+.searchcarcardrow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.searchcarcard{
+    margin-top: 20px;
+    height: 360px;
+    width: 30%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #64748B;
+}
+
+.searchcarcardimage{
+    height: 60%;
+    width: 100%;
+    background-color: red;
+}
+
+.searchcardcarinfo{
+    display: flex;
+    flex-direction: row;
+    height: 14%;
+    width: 100%;
+}
+
+.searchcardcarname{
+    height: 100%;
+    width: 100%;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+.searchcardcarprice{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: row;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.searchcardcarproperties{
+    height: 13%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.searchcardcarproperty{
+    height: 93%;
+    width: 100%;
+    border-color: white;
+    border-bottom: #64748B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-width: 2px;
+}
+
+.searchcardcarviewdetails{
+    height: 13%;
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 14px;
+    box-sizing: border-box;
+}
+
+.searchcardviewdetailsbutton{
+    height: 80%;
+    width: 96%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #64748B;
+}
