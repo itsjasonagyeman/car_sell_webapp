@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import DiscoverPage from './pages/DiscoverPage';
 import SearchPage from './pages/SearchPage';
 import CartPage from './pages/CartPage';
+import CarDetailsPage from './pages/CarDetailsPage';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path='/discover' element={<DiscoverPage/>}/>
           <Route path='/search' element={<SearchPage/>}/>
           <Route path='/cart' element={<CartPage/>}/>
+          <Route path='/cardetails' element={<CarDetailsPage/>}/>
         </Routes>
       </div>
   );

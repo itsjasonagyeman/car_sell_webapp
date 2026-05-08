@@ -1,5 +1,6 @@
 import React from 'react'
 import './FleetPreview.css'
+import { Link } from 'react-router-dom'
 
 function FleetPreviewCard({name, type, title, amount, duration, mph, engine, transmission}){
     return(
@@ -22,7 +23,7 @@ function FleetPreviewCard({name, type, title, amount, duration, mph, engine, tra
                     <div>{transmission}</div>
                 </div>
                 <div className='fleetpreviewdetails'>
-                    <div className='fleetpreviewdetailsbutton'>VIEW DETAILS</div>
+                    <Link to='/cardetails'><div className='fleetpreviewdetailsbutton'>VIEW DETAILS</div></Link>
                 </div>
         </div>
     )
