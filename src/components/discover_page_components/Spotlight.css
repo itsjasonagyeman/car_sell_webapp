@@ -67,6 +67,7 @@
 
 .spotlightcardetailsbutton{
     height: 80%;
+    text-decoration: none;
     width: 140px;
     background-color: #0052FF;
     display: flex;

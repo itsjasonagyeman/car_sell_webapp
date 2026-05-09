@@ -1,5 +1,6 @@
 import React from 'react'
 import './Spotlight.css'
+import { Link } from 'react-router-dom'
 
 export default function Spotlight() {
     const spotlightCarName = 'Ferrari'
@@ -19,7 +20,7 @@ export default function Spotlight() {
                 <div className='spotlightcarprice'>${spotlightCarPrice}</div>
             </div>
             <div className='spotlightcardetailsbuttondiv'>
-                <div className='spotlightcardetailsbutton'>See&nbsp;More</div>
+                <Link to='/cardetails' className='spotlightcardetailsbutton'>See&nbsp;More</Link>
             </div>
         </div>
         <div className='spotlightimage'>

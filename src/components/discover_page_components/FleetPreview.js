@@ -23,7 +23,7 @@ function FleetPreviewCard({name, type, title, amount, duration, mph, engine, tra
                     <div>{transmission}</div>
                 </div>
                 <div className='fleetpreviewdetails'>
-                    <Link to='/cardetails'><div className='fleetpreviewdetailsbutton'>VIEW DETAILS</div></Link>
+                    <Link to='/cardetails' className='fleetpreviewdetailsbutton'>VIEW DETAILS</Link>
                 </div>
         </div>
     )

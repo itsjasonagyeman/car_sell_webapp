@@ -1,5 +1,6 @@
 import React from 'react'
 import './SearchResults.css'
+import { Link } from 'react-router-dom'
 
 function SearchResultsCarCard(){
   return(
@@ -22,7 +23,7 @@ function SearchResultsCarCard(){
                         <div className='searchcardcarproperty'>MANUAL</div>
                     </div>
                     <div className='searchcardcarviewdetails'>
-                        <div className='searchcardviewdetailsbutton'>VIEW DETAILS</div>
+                        <Link to='/cardetails' className='searchcardviewdetailsbutton'>VIEW DETAILS</Link>
                     </div>
                 </div>
   )

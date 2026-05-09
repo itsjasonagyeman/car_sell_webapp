@@ -7,7 +7,11 @@ function CartCarCard(){
           <div className='cartcard'>
             <div className='cartcardimage'></div>
             <div className='cartcardinfo'>
-              <div className='cartcarname'>Porsche 911 GT3</div>
+              <div className='cartcarnameanddelete'>
+                <div className='cartcarname'>Porsche 911 GT3</div>
+                <div className='cartcardelete'></div>
+              </div>
+              
               <div className='cartcarproperties'>2024 Model Guards Red Performance Exhaust</div>
               <div className='cartcarsaletypeandperioddiv'>  
                 <div className='cartcarsaletypeandperiodrow'>
