@@ -1,3 +1,161 @@
 .cardetailsmainbody{
     margin-top: 80px;
+    margin-left: 50px;
+    margin-right: 25px;
+    height: 200vh;
 }
+
+.cardetailsimages{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.primarycarimage{
+    height: 100%;
+    width: 55%;
+    background-color: blue;
+}
+
+.secondarycarimages{
+    height: 100%;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.secondarycarimage{
+    height: 49%;
+    width: 100%;
+    background-color: pink;
+}
+
+.cardetailsinfo{
+    height: 15%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #64748B;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.cardetailsperformance{
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cardetailsperfomancetext{
+    color: #0052FF;
+    font-weight: 500;
+}
+
+.cardetailspricetitle{
+    color: #64748B;
+    font-weight: 500;
+}
+
+.cardetailsnameandprice{
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cardetailsname{
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.cardetailsprice{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.cardetailsdescriptionandbutton{
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cardetailsdescription{
+    height: 100%;
+    width: 62%;
+    align-items: center;
+    color: #64748B;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.cardetailsbutton{
+    background-color: #0052FF;
+    height: 100%;
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.cardetailsbutton:hover{
+    cursor: pointer;
+    background-color: blue;
+    transition: all 0.2s ease;
+}
+
+.cardetailsproperties{
+    height: 15%;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cardetailsproperty{
+    height: 100%;
+    width: 24%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #64748B;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.cardetailspropertytitle{
+    font-size: 20px;
+    color: #64748B;
+    font-weight: 700;
+}
+
+.cardetailspropertyvalue{
+    margin-top: 25px;
+    font-size: 50px;
+    color: black;
+    font-weight: 600;
+}
+
+.cardetailspropertyinfo{
+    margin-top: 10px;
+    font-size: 20px;
+    color: #64748B;
+    font-weight: 600;
+}
+
+
