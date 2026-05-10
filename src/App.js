@@ -5,6 +5,7 @@ import DiscoverPage from './pages/DiscoverPage';
 import SearchPage from './pages/SearchPage';
 import CartPage from './pages/CartPage';
 import CarDetailsPage from './pages/CarDetailsPage';
+import CheckoutPage from './pages/CheckoutPage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path='/search' element={<SearchPage/>}/>
           <Route path='/cart' element={<CartPage/>}/>
           <Route path='/cardetails' element={<CarDetailsPage/>}/>
+          <Route path='/checkout' element={<CheckoutPage/>}/>
         </Routes>
       </div>
   );

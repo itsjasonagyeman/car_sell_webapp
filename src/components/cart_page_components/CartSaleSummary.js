@@ -1,5 +1,6 @@
 import React from 'react'
 import './CartSaleSummary.css'
+import { Link } from 'react-router-dom'
 
 export default function CartSaleSummary() {
   return (
@@ -21,7 +22,7 @@ export default function CartSaleSummary() {
             <div className='cartsaletotaltitle'>TOTAL</div>
             <div className='cartsaletotalprice'>$10,000</div>
           </div>
-          <div className='proceedtocheckoutbutton'>PROCEED TO CHECKOUT</div>
+          <Link to='/checkout' className='proceedtocheckoutbutton'>PROCEED TO CHECKOUT</Link>
           <div className='guaranteecard'>
             <div className='guaranteedsecurity'>GUARANTEED SECURITY</div>
             <div className='datasecurity'>Your data is protected by industry-standard encryption protocols</div>
