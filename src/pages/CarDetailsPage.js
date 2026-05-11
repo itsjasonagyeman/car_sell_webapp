@@ -1,5 +1,6 @@
 import React from 'react'
 import './CarDetailsPage.css'
+import { Link } from 'react-router-dom'
 
 function CarDetailsProperty(){
   return(
@@ -33,7 +34,7 @@ export default function CarDetailsPage() {
         </div>
         <div className='cardetailsdescriptionandbutton'>
           <div className='cardetailsdescription'>diuhhxewchwiecbwiucbwicbiuwc</div>
-          <div className='cardetailsbutton'>RENT VEHICLE</div>
+          <Link to='/cart' className='cardetailsbutton'>RENT VEHICLE</Link>
         </div>
       </div>
       
