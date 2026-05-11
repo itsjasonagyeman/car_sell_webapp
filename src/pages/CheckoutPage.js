@@ -1,13 +1,13 @@
 import React, {useState} from 'react'
 import './CheckoutPage.css'
+import CartSaleSummary from '../components/cart_page_components/CartSaleSummary'
 
-export default function CheckoutPage() {
-  let [creditIsActive, setCreditIsActive] = useState(false)
+function CheckoutInfo(){
+  let [creditIsActive, setCreditIsActive] = useState(true)
   let [paypalIsActive, setPaypalIsActive] = useState(false)
   let [cryptoIsActive, setCryptoIsActive] = useState(false)
-  return (
-    <div className='checkoutpagemainbody'>
-      <div className='checkoutinfo'>
+  return(
+ <div className='checkoutinfo'>
         <div className='securecheckout'>Secure Checkout</div>
         <div className='securecheckoutdescription'></div>
         <div className='billinginfo'>BILLING INFORMATION</div>
@@ -29,9 +29,23 @@ export default function CheckoutPage() {
           {cryptoIsActive && <div className='cryptoactive' onClick={()=> setCryptoIsActive(false)}>CRYPTO</div>}
           {!cryptoIsActive && <div className='crypto' onClick={()=> {setCryptoIsActive(true); setCreditIsActive(false); setPaypalIsActive(false)}}>CRYPTO</div>}
         </div>
-        <div className='paymentmethodform'></div>
+        <div className='paymentmethodform'>
+          <input type='text' placeholder='CREDIT CARD NUMBER' className='cardnumber'/>
+          <div className='expdateandcvvdiv'>
+            <input className='expdate'  placeholder='EXPIRATION DATE'/>
+            <input className='cvv' placeholder='CVV'/>
+          </div>
+        </div> 
       </div>
-      <div className='checkoutconfirmationcard'></div>
+  )
+}
+
+export default function CheckoutPage() {
+
+  return (
+    <div className='checkoutpagemainbody'>
+      <CheckoutInfo/>
+      <CartSaleSummary/>
     </div>
   )
 }
