@@ -1,5 +1,99 @@
 .checkoutpagemainbody{
     margin-top: 80px;
     margin-left: 50px;
-    margin-right: 25px; 
+    margin-right: 25px;
+    display: flex;
+    flex-direction: row;
+    background-color: blue;
+    height: 200vh; 
 }
+
+.checkoutinfo{
+    width: 70%;
+    height: 100%;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+}
+
+.securecheckout{
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.securecheckoutdescription{
+    height: 50px;
+    width: 100%;
+    background-color: yellow;
+}
+
+.billinginfo{
+    margin-top: 30px;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.checkoutnameandemail, .checkoutcityandpostalcode{
+    width: 100%;
+    height: 30px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.checkoutname, .checkoutemail, .checkoutcity, .checkoutpostalcode{
+    width: 48%;
+    height: 100%;
+    outline: none;
+    border-style: solid;
+    border-left-color: white;
+    border-right-color: white;
+    border-top-color: white;
+    border-bottom-color: #64748B;
+    padding-left: 5px;
+}
+
+.checkoutbillingaddress{
+    margin-top: 20px;
+    width: 99%;
+    height: 30px;
+    border-style: solid;
+    outline: none;
+    border-left-color: white;
+    border-right-color: white;
+    border-top-color: white;
+    border-bottom-color: #64748B;
+}
+
+.paymentmethodpicker{
+    height: 30px;
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    background-color: yellow;
+    align-items: top;
+}
+
+.creditcard, .paypal, .crypto{
+    margin-right: 20px;
+    color: black;
+}
+
+:is(.creditcard, .paypal, .crypto, .creditcardactive, .paypalactive, .cryptoactive):hover{
+    cursor: pointer;
+}
+
+.creditcardactive, .paypalactive, .cryptoactive{
+    color: #0052FF;
+    margin-right: 20px;
+    border-style: solid;
+    border-bottom-color: #0052FF;
+    border-width: 2px;
+    border-top: none;
+    border-left: none;
+    border-right:none
+}
+
