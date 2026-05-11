@@ -45,7 +45,7 @@ export default function CheckoutPage() {
   return (
     <div className='checkoutpagemainbody'>
       <CheckoutInfo/>
-      <CartSaleSummary/>
+      <CartSaleSummary checkoutcompletetext='COMPLETE TRANSACTION'/>
     </div>
   )
 }

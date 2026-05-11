@@ -38,7 +38,7 @@ export default function CartPage() {
           <CartCarCard/>
           <CartCarCard/>
         </div>
-        <CartSaleSummary/>
+        <CartSaleSummary checkoutcompletetext='PROCEED TO CHECKOUT'/>
       </div>
     </div>
   )

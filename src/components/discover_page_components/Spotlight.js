@@ -25,7 +25,16 @@ export default function Spotlight() {
         </div>
         <div className='spotlightimage'>
             <div className='spotlightcarimage'></div>
-            <div className='spotlightcarinformation'></div>
+            <div className='spotlightcarinformation'>
+                <div className='spotlightcarspeeddiv'>
+                    <div className='spotlightcarspeedheader'>0-60 MPH</div>
+                    <div className='spotlightcarspeedinfo'>2.4 SEC</div>
+                </div>
+                <div className='spotlightcarenginediv'>
+                    <div className='spotlightcarengineheader'>ENGINE</div>
+                    <div className='spotlightcarengineinfo'>V12 TWIN</div>
+                </div>
+            </div>
         </div>
     </div>
   )
