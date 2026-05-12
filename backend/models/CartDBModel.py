@@ -1,8 +1,8 @@
 from database.dbsetup import Base
 from sqlalchemy import Column, Integer, String
 
-class CarDBModel(Base):
-    __tablename__ = 'Cars'
+class CartDBModel(Base):
+    __tablename__ = 'cart'
 
     id = Column(Integer, primary_key=True, index=True)
     primary_name = Column(String)
