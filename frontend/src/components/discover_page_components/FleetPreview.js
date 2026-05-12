@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './FleetPreview.css'
 import { Link } from 'react-router-dom'
 
-function FleetPreviewCard({image, primaryname, saletype, secondaryname, price, duration, speed, enginetype, geartype}){
+function FleetPreviewCard({image, primaryname, saletype, secondaryname, price, rentduration, speed, enginetype, geartype, id}){
     return(
         <div className='fleetpreviewcard'>
                 <div className='fleetpreviewimage' style={{backgroundColor: image}}></div>
@@ -14,7 +14,7 @@ function FleetPreviewCard({image, primaryname, saletype, secondaryname, price, d
                     <div className='fleetpreviewcartitle'>{secondaryname}</div>
                     <div className='fleetpreviewcarprice'>
                         <div className='fleetpreviewcarpriceamount'>${price}</div>
-                        <div className='fleetpreviewcarduration'>{duration}</div>
+                        <div className='fleetpreviewcarduration'>{rentduration}</div>
                     </div>
                 </div>
                 <div className='fleetpreviewcarproperties'>
@@ -23,7 +23,7 @@ function FleetPreviewCard({image, primaryname, saletype, secondaryname, price, d
                     <div>{geartype}</div>
                 </div>
                 <div className='fleetpreviewdetails'>
-                    <Link to='/cardetails' className='fleetpreviewdetailsbutton'>VIEW DETAILS</Link>
+                    <Link to={`/cardetails/${id}`} className='fleetpreviewdetailsbutton'>VIEW DETAILS</Link>
                 </div>
         </div>
     )
@@ -48,12 +48,13 @@ export default function FleetPreview() {
             {cars.map((car,index)=>{
                 return <FleetPreviewCard
                 key={car.id}
+                id={car.id}
                 image={car.image}
                 primaryname = {car.primary_name}
                 secondaryname={car.secondary_name}
                 saletype={car.sale_type}
                 price={car.price}
-                duration= '/DAY'
+                rentduration= '/DAY'
                 speed={car.speed}
                 enginetype={car.engine_type}
                 geartype={car.gear_type}

@@ -1,18 +1,28 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './CarDetailsPage.css'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
-function CarDetailsProperty(){
+function CarDetailsProperty({propertyname, propertyvalue, propertyinfo}){
   return(
     <div className='cardetailsproperty'>
-      <div className='cardetailspropertytitle'>POWER</div>
-      <div className='cardetailspropertyvalue'>502</div>
-      <div className='cardetailspropertyinfo'>Great Horsepower</div>
+      <div className='cardetailspropertytitle'>{propertyname}</div>
+      <div className='cardetailspropertyvalue'>{propertyvalue}</div>
+      <div className='cardetailspropertyinfo'>{propertyinfo}</div>
     </div>
   )
 }
 
 export default function CarDetailsPage() {
+  const {id} = useParams()
+  const [car, setCar] = useState(null)
+  useEffect(()=> {
+    fetch(`http://127.0.0.1:8000/cars/car/${id}`)
+    .then(res => res.json())
+    .then(data => setCar(data))
+    .catch(err => console.log(err))
+  }, [id])
+
+  if (!car) return <div>Loading...</div>
   return (
     <div className='cardetailsmainbody'>
       <div className='cardetailsimages'>
@@ -25,12 +35,12 @@ export default function CarDetailsPage() {
 
       <div className='cardetailsinfo'>
         <div className='cardetailsperformance'>
-          <div className='cardetailsperfomancetext'>Track-Ready Performance</div>
+          <div className='cardetailsperfomancetext'>{car.primary_name}</div>
           <div className='cardetailspricetitle'>Price Per Day</div>
         </div>
         <div className='cardetailsnameandprice'>
-          <div className='cardetailsname'>PORSCHE 911 GT3(922)</div>
-          <div className='cardetailsprice'>$1,250</div>
+          <div className='cardetailsname'>{car.secondary_name}</div>
+          <div className='cardetailsprice'>${car.price}</div>
         </div>
         <div className='cardetailsdescriptionandbutton'>
           <div className='cardetailsdescription'>diuhhxewchwiecbwiucbwicbiuwc</div>
@@ -39,10 +49,9 @@ export default function CarDetailsPage() {
       </div>
       
       <div className='cardetailsproperties'>
-        <CarDetailsProperty/>
-        <CarDetailsProperty/>
-        <CarDetailsProperty/>
-        <CarDetailsProperty/>
+        <CarDetailsProperty propertyname='SPEED' propertyvalue={car.speed} propertyinfo='MPH'/>
+        <CarDetailsProperty propertyname= 'ENGINE TYPE' propertyvalue={car.engine_type} propertyinfo='Diesel'/>
+        <CarDetailsProperty propertyname= 'TRANSMISSION' propertyvalue={car.gear_type} propertyinfo='Gear Type'/>
       </div>
     </div>
   )

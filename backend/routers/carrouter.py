@@ -18,6 +18,13 @@ def get_db():
 def get_cars(db: Session = Depends(get_db)):
     return db.query(CarDBModel).all()
 
+@router.get('/car/{id}')
+def get_car(id: int, db: Session = Depends(get_db)):
+    car = db.query(CarDBModel).filter(CarDBModel.id == id).first()
+    if not car:
+        return {'message': 'Car not found'}
+    return car
+
 @router.post('/car')
 def create_car(car: CarSchema, db: Session = Depends(get_db)):
     new_car = CarDBModel(**car.model_dump())
