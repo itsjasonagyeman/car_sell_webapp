@@ -61,7 +61,6 @@ export default function CartPage() {
         <div className='cartcars'>
           {cart.map((item, index) => {
             return <CartCarCard 
-            key={item.id}
             id = {item.id}
             setIsPopUp={setIsPopUp}
             setSelectedId={setSelectedId}

@@ -14,7 +14,7 @@ export default function Navbar() {
                 <Link to='/cart' className={`cartnav ${isActive('/cart') ? 'active' : ''}`}>Cart</Link>
             </div>
             <div className='searchdiv'>
-                <div className='accountbutton'></div>
+                <Link to='/admin' className='accountbutton' />
                 <input type='text' placeholder='Search' className='searchbox'/>
             </div>
         </div>

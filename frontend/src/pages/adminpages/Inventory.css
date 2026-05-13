@@ -1,0 +1,211 @@
+.inventoryheaderdiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.viewinventorytext{
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.viewinventorydescription{
+    font-weight: 500;
+    color: #64748B;
+    font-size: 20px;
+}
+
+.addnewvehiclebutton{
+    height: 60px;
+    width: 200px;
+    background-color: #0052FF;
+    font-weight: 600;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.addnewvehiclebutton:hover{
+    background-color: blue;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.inventorysearchdiv{
+    margin-top: 20px;
+    height: 70px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.inventorysearchbar{
+    height: 70%;
+    box-sizing: border-box;
+    padding-left: 10px;
+    border-style: solid;
+    outline: none;
+    border-width: 1px;
+    width: 600px;
+}
+
+.inventoryfilterstatusbutton, .inventoryfilterpricebutton{
+    height: 60%;
+    width: 180px;
+    border-style: solid;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: #64748B;
+    border-width: 1px;
+    margin-left: 10px;
+}
+
+.inventoryfilterpricebutton{
+    width: 230px;
+}
+
+:is(.inventoryfilterstatusbutton, .inventoryfilterpricebutton):hover{
+    cursor: pointer;
+}
+
+.inventorytablediv{
+    height: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.3);
+}
+
+.inventorytableheaders, .inventorycarcard{
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #64748B;
+}
+
+.inventorycarcard{
+    background-color: white;
+    margin-top: 20px;
+}
+
+.vehicleheader, .priceheader, .statusheader, .actionsheader, .categoryheader{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    font-weight: 600;
+    align-items: center;
+    justify-content: start;
+}
+
+.vehicleheader{
+    width: 30%;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+
+.priceheader, .statusheader, .actionsheader, .categoryheader{
+    width: 17.5%;
+}
+
+.inventoryvehicle, .inventoryprice, .inventorystatus, .inventoryactions, .inventorycategory{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start
+}
+
+.inventoryvehicle{
+    width: 30%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    box-sizing: border-box;
+}
+
+.inventoryprice, .inventorystatus, .inventoryactions, .inventorycategory{
+    width: 17.5%;
+}
+
+.inventoryvehicleimage{
+    height: 100%;
+    width: 40%;
+    background-color: red;
+}
+
+.inventoryvehicleinfo{
+    display: flex;
+    box-sizing: border-box;
+    padding-left: 10px;
+    height: 100%;
+    width: 55%;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.inventoryvehicleprimaryname{
+    font-size: 25px;
+    font-weight: 700;
+    color: black;
+}
+
+.inventoryvehiclesecondaryname{
+    font-size: 20px;
+    font-weight: 600;
+    color: #64748B;
+}
+
+.inventoryactions{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-right: 20px;
+}
+
+.inventoryupdate{
+    height: 40px;
+    width: 60%;
+    background-color: #0052FF;
+    font-weight: 600;
+    color: white;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.inventoryupdate:hover{
+    cursor: pointer;
+    background-color: blue;
+    transition: all 0.2s ease;
+}
+
+.inventorydelete{
+    height: 40px;
+    width: 24%;
+    background-color: red;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.inventorydelete:hover{
+    background-color: darkred;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+

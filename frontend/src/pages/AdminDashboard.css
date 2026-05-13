@@ -1,0 +1,54 @@
+.mainadminbody{
+    height: 150vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.adminsidebar{
+    padding-top: 80px;
+    padding-left: 50px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    height: 120%;
+    width: 20%;
+    background-color: yellow;
+    border-style: solid;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+    border-width: 2px;
+    border-right-color: #64748B;
+}
+
+.adminviewspace{
+    margin-top: 80px;
+    box-sizing: border-box;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 100%;
+    width: 80%;
+}
+
+.settings, .inventory, .bookings{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    height: 40px;
+    text-decoration: none;
+    color: black;
+}
+
+:is(.settings, .inventory, .bookings):hover{
+    cursor: pointer;
+}
+
+.inventory.active, .settings.active, .bookings.active{
+    transition: all 0.2s ease;
+    background-color: #0052FF;
+    color: white;
+}
