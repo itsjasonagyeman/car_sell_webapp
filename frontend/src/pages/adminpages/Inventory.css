@@ -209,3 +209,89 @@
     transition: all 0.2s ease;
 }
 
+.inventoryresultsdiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 80px;
+    background-color: rgb(191, 191, 253);
+    width: 100%;
+}
+
+.changeinventorydiv{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.showingresults{
+    width: 40%;
+    font-weight: 600;
+    color: #64748B;
+}
+
+.previousinventorybutton, .nextinventorybutton{
+    border-style: solid;
+    border-width: 2px;
+    border-color: #64748B;
+    font-weight: 600;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
+    width: 100px;
+}
+
+.resultsbutton{
+    height: 70%;
+    width: 50px;
+    font-weight: 600;
+    color: black;
+    border-style: solid;
+    border-color: #64748B;
+    border-width: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inventorypropertiesdiv{
+    margin-top: 40px;
+    height: 150px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.inventoryproperty{
+    height: 97%;
+    width: 24%;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #64748B;
+}
+
+.inventorypropertyfigure{
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.inventorypropertyname{
+    font-weight: 500;
+    color: #64748B;
+    font-size: 20px;
+}
