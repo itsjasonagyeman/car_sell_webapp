@@ -1,0 +1,53 @@
+.popupbackdrop{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 99999;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0,0,0,0.3);
+}
+
+.popup{
+    height: 35%;
+    width: 35%;
+    border-radius: 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: white;
+}
+
+.popupheader{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.yesnodiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.yesnobutton{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    height: 50px;
+    width: 30%;
+    border-radius: 20px;
+}
+
+.yesnobutton:hover{
+    cursor: pointer;
+    background-color: grey;
+    transition: all 0.2s ease;
+}

@@ -8,6 +8,7 @@ export default function AdminDashboard() {
     const [page, setPage] = useState('inventory')
   return (
     <div className='mainadminbody'>
+        
         <div className='adminsidebar'>
             <div className={`inventory ${(page === 'inventory') ? 'active' : ''} `} onClick={() => setPage('inventory')}>Inventory</div>
             <div className={`bookings ${(page === 'bookings') ? 'active' : ''} `} onClick={() => setPage('bookings')} >Bookings</div>

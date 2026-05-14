@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Inventory.css'
+import InventoryDeletePopUp from '../../components/inventory_components/InventoryDeletePopUp'
+import AddNewVehicle from '../../components/inventory_components/AddNewVehicle'
 
 function InventoryCarCard(){
+    const [showDelete, setShowDelete] = useState(false)
+    
     return(
         <div className='inventorycarcard'>
+                {showDelete && <InventoryDeletePopUp setShowDelete={setShowDelete}/>}
                 <div className='inventoryvehicle'>
                     <div className='inventoryvehicleimage'></div>
                     <div className='inventoryvehicleinfo'>
@@ -16,7 +21,7 @@ function InventoryCarCard(){
                 <div className='inventorycategory'>Supercar</div>
                 <div className='inventoryactions'>
                     <div className='inventoryupdate'>UPDATE</div>
-                    <div className='inventorydelete'></div>
+                    <div className='inventorydelete' onClick={()=>{setShowDelete(true)}}></div>
                 </div>
             </div>
     )
@@ -32,14 +37,16 @@ function InventoryPropertyCard(){
 }
 
 export default function Inventory() {
+    const [showAddNewPopup, setShowAddNewPopup] = useState(false)
   return (
     <div className='maininventorybody'>
+        {showAddNewPopup && <AddNewVehicle setShowAddNewPopup={setShowAddNewPopup}/>}
         <div className='inventoryheaderdiv'>
             <div className='inventorypagetitle'>
                 <div className='viewinventorytext'>View Inventory</div>
                 <div className='viewinventorydescription'>Manage your fleet and track status</div>
             </div>
-            <div className='addnewvehiclebutton'>+ Add New Vehicle</div>
+            <div className='addnewvehiclebutton' onClick={()=>{setShowAddNewPopup(true)}}>+ Add New Vehicle</div>
         </div>
 
         <div className='inventorysearchdiv'>
