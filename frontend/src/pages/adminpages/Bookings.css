@@ -1,0 +1,189 @@
+.mainbookingsbody{
+    display: flex;
+    flex-direction: column;
+}
+
+.bookingstitle{
+    font-weight: 600;
+    font-size: 50px;
+}
+
+.bookingscarddiv{
+    margin-top: 20px;
+    height: 200px;
+    width: 100%;
+}
+
+.bookingscard{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 100%;
+    width: 23%;
+    background-color: whitesmoke;
+    padding: 20px;
+    padding-top: 30px;
+    border-style: solid;
+    border-radius: 20px;
+    border-color: grey;
+    border-width: 2px;
+}
+
+.bookingscardtitle{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.bookingscardvalue{
+    font-size: 60px;
+    font-weight: 500;
+}
+
+.bookingsfilterdiv{
+    margin-top: 20px;
+    height: 60px;
+    width: 100%;
+    background-color: green;
+}
+
+.bookingscustomertable{
+    margin-top: 20px;
+    height: 650px;
+    width: 100%;
+    background-color: whitesmoke;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: gray;
+    border-radius: 10px;
+}
+
+.bookingscustomertabletitles{
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+}
+
+.bookingscustomer, .bookingsvehicle, .bookingsperiod, .bookingsstatus, .bookingsrevenue, .bookingsactions{
+    height: 100%;
+    width: 16.67%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.bookingscustomer{
+    box-sizing: border-box;
+    padding-left: 15px;
+    width: 19%;
+}
+
+.bookingsperiod{
+    width: 12%;
+}
+
+.bookingsrevenue, .bookingsactions{
+    width: 18%;
+}
+
+.bookingscustomercard{
+    height: 120px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border-style: solid;
+    border-color: gray;
+    border-width: 2px;
+    border-left: none;
+    border-right: none;
+}
+
+
+
+.bookingscardcustomer{
+    height: 100%;
+    width: 19%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bookingscardcustomerimage{
+    margin-top: 25px;
+    height: 50%;
+    width: 35%;
+    border-radius: 10px;
+    margin-left: 6px;
+}
+
+.bookingscardcustomerinfo{
+    height: 100%;
+    width: 60%;
+    font-weight: 700;
+    box-sizing: border-box;
+    padding-top: 20px;
+    font-size: 20px;
+}
+
+.bookingscardvehicle{
+    height: 100%;
+    width: 16.67%;
+    box-sizing: border-box;
+    padding-top: 10px;
+}
+
+.bookingscardvehiclebrand{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.bookingscardvehiclemodel{
+    font-size: 20px;
+    font-weight: 500;
+    color: gray;
+}
+
+.bookingscardperiod{
+    height: 100%;
+    width: 12%;
+    font-size: 20px;
+    font-weight: 500;
+    box-sizing: border-box;
+    padding-top: 15px;
+}
+
+
+.bookingscardstatus{
+    margin-top: 35px;
+    height: 40%;
+    width: 16.67%;
+    background-color:rgb(54, 209, 54) ;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    font-weight: 500;
+    color: rgb(5, 116, 5);
+}
+
+.bookingscardrevenue{
+    height: 100%;
+    width: 18%;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 35px;
+    box-sizing: border-box;
+    padding-left: 15px;
+}
+
+
+.bookingscardactions{
+    height: 100%;
+    width: 18%;
+    background-color: pink;
+}
