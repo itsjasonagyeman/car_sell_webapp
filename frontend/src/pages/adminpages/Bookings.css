@@ -12,6 +12,9 @@
     margin-top: 20px;
     height: 200px;
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .bookingscard{
@@ -49,7 +52,7 @@
 
 .bookingscustomertable{
     margin-top: 20px;
-    height: 650px;
+    height: 565px;
     width: 100%;
     background-color: whitesmoke;
     border-style: solid;
@@ -114,6 +117,7 @@
     margin-top: 25px;
     height: 50%;
     width: 35%;
+    background-color: yellow;
     border-radius: 10px;
     margin-left: 6px;
 }
