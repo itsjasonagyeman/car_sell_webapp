@@ -1,7 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './AddNewVehicle.css'
 
 export default function AddNewVehicle({setShowAddNewPopup}) {
+    const [formData, setFormData] = useState({
+        primaryname : '',
+        secondaryname: '',
+        saletype: '',
+        price: '',
+        speed: '',
+        enginetype: '',
+        geartype:'',
+        engine: '',
+        image: '',
+    })
+
   return (
     <div className='addnewvehiclemainbody'>
         <div className='addnewvehicleform'>
@@ -9,7 +21,10 @@ export default function AddNewVehicle({setShowAddNewPopup}) {
                 <div className='addnewvehicleformtitle'>ADD NEW VEHICLE</div>
                 <div className='addnewvehicleclose' onClick={()=> setShowAddNewPopup(false)}></div>
             </div>
-            <input type='text' placeholder='CAR BRAND' className='formtext'/>
+            <input type='text' placeholder='CAR BRAND' className='formtext' onChange={(e) => setFormData({
+                ...formData,
+                primaryname: e.target.value
+            })}/>
             <input type='text' placeholder='CAR MODEL' className='formtext'/>
             <select className='formselect'>
                 <option value='' disabled>CAR  STATUS</option>
