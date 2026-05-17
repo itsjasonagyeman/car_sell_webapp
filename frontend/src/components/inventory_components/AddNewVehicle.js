@@ -25,27 +25,51 @@ export default function AddNewVehicle({setShowAddNewPopup}) {
                 ...formData,
                 primaryname: e.target.value
             })}/>
-            <input type='text' placeholder='CAR MODEL' className='formtext'/>
-            <select className='formselect'>
+            <input type='text' placeholder='CAR MODEL' className='formtext' onChange={(e)=> setFormData({
+                ...formData,
+                secondaryname: e.target.value
+            })}/>
+            <select className='formselect' onChange={(e) => setFormData({
+                ...formData,
+                saletype: e.target.value,
+            })}>
                 <option value='' disabled>CAR  STATUS</option>
                 <option value='RENT'>RENT</option>
                 <option value='SALE'>SALE</option>
             </select>
-            <input type='text' placeholder='PRICE' className='formtext'/>
-            <input type='text' placeholder='SPEED IN MPH' className='formtext'/>
-            <select className='formselect'>
+            <input type='text' placeholder='PRICE' className='formtext' onChange={(e) => setFormData({
+                ...formData,
+                price: e.target.value,
+            })}/>
+            <input type='text' placeholder='SPEED IN MPH' className='formtext' onChange={(e) => setFormData({
+                ...formData,
+                speed: e.target.value,
+            })}/>
+            <select className='formselect' onChange={(e) => setFormData({
+                ...formData,
+                enginetype: e.target.value,
+            })}>
                 <option value='' disabled>ENGINE TYPE</option>
                 <option value='GAS'>GAS</option>
                 <option value='ELECTRIC'>ELECTRIC</option>
                 <option value='HYBRID'>HYBRID</option>
             </select>
-            <select className='formselect'>
+            <select className='formselect' onChange={(e) => setFormData({
+                ...formData,
+                geartype: e.target.value,
+            })}>
                 <option value='' disabled>TRANSMISSION</option>
                 <option value='MANUAL' >MANUAL</option>
                 <option value='AUTOMATIC'>AUTOMATIC</option>
             </select>
-            <input type='text' placeholder='ENGINE' className='formtext'/>
-            <input type='text' placeholder='IMAGE' className='formtext'/>
+            <input type='text' placeholder='ENGINE' className='formtext' onChange={(e)=> setFormData({
+                ...formData,
+                engine: e.target.value,
+            })}/>
+            <input type='text' placeholder='IMAGE' className='formtext' onChange={(e) => setFormData({
+                ...formData,
+                image: e.target.value,
+            })}/>
             <div className='addnewvehicledone' onClick={()=>{setShowAddNewPopup(false)}}>DONE</div>
         </div>
     </div>
