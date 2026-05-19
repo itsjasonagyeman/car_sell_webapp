@@ -4,7 +4,7 @@ import InventoryDeletePopUp from '../../components/inventory_components/Inventor
 import AddNewVehicle from '../../components/inventory_components/AddNewVehicle'
 import UpdateVehicle from '../../components/inventory_components/UpdateVehicle'
 
-function InventoryCarCard({primary_name, secondary_name, price, image}){
+function InventoryCarCard({primary_name, secondary_name, price, image, callDeleteFunction}){
     const [showDelete, setShowDelete] = useState(false)
     const [showUpdatePopup, setShowUpdatePopup] = useState(false)
 
@@ -13,7 +13,7 @@ function InventoryCarCard({primary_name, secondary_name, price, image}){
     return(
         <div className='inventorycarcard'>
                 {showUpdatePopup && <UpdateVehicle setShowUpdatePopup={setShowUpdatePopup}/>}
-                {showDelete && <InventoryDeletePopUp setShowDelete={setShowDelete}/>}
+                {showDelete && <InventoryDeletePopUp setShowDelete={setShowDelete} callDeleteFunction={callDeleteFunction}/>}
                 <div className='inventoryvehicle'>
                     <div className='inventoryvehicleimage' style={{
                         backgroundColor: image
@@ -28,7 +28,7 @@ function InventoryCarCard({primary_name, secondary_name, price, image}){
                 <div className='inventorycategory'>Supercar</div>
                 <div className='inventoryactions'>
                     <div className='inventoryupdate' onClick={()=> {setShowUpdatePopup(true)}}>UPDATE</div>
-                    <div className='inventorydelete' onClick={()=>{setShowDelete(true)}}></div>
+                    <div className='inventorydelete' onClick={()=>{setShowDelete(true)}} ></div>
                 </div>
             </div>
     )
@@ -52,6 +52,20 @@ export default function Inventory() {
         .then(data => setInventoryCars(data))
         .catch(err => console.log(err))
     }, [])
+
+    function deleteCar(id){
+        fetch(`http://127.0.0.1:8000/cars/car/${id}`,{
+            method: 'DELETE'
+        })
+        .then(res => res.json())
+        .then(() => {
+            setInventoryCars(prev =>
+                prev.filter(cars => cars.id !== id)
+            )
+        })
+        .catch(err => console.log(err))
+    }
+
      
   return (
     <div className='maininventorybody'>
@@ -87,6 +101,7 @@ export default function Inventory() {
                     primary_name={inventorycar.primary_name}
                     secondary_name= {inventorycar.secondary_name}
                     price={inventorycar.price}
+                    callDeleteFunction={() => deleteCar(inventorycar.id)}
                 />
             })}
         </div>
