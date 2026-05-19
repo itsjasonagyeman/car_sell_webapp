@@ -78,3 +78,23 @@ def delete_car(id: int ,db: Session = Depends(get_db)):
     db.commit()
     return {'message':'Cart deleted'}
 
+
+@router.put('/car/{id}')
+def update_car(id: int, new_car:CarSchema, db: Session = Depends(get_db)):
+    existing_car = db.query(CarDBModel).filter(CarDBModel.id == id).first()
+
+    if not existing_car:
+        return {'message': 'Car not found'}
+    
+    existing_car.primary_name = new_car.primary_name
+    existing_car.secondary_name = new_car.secondary_name
+    existing_car.sale_type = new_car.sale_type
+    existing_car.price = new_car.price
+    existing_car.speed = new_car.speed
+    existing_car.gear_type = new_car.gear_type
+    existing_car.engine = new_car.engine
+    existing_car.image = new_car.image
+
+    db.commit()
+    db.refresh(existing_car)
+    return existing_car

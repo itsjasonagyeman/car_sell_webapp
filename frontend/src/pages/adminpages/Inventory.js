@@ -4,7 +4,7 @@ import InventoryDeletePopUp from '../../components/inventory_components/Inventor
 import AddNewVehicle from '../../components/inventory_components/AddNewVehicle'
 import UpdateVehicle from '../../components/inventory_components/UpdateVehicle'
 
-function InventoryCarCard({primary_name, secondary_name, price, image, callDeleteFunction}){
+function InventoryCarCard({primary_name, secondary_name, price, image, callDeleteFunction, updateID, updateindex, inventorycars, setInventoryCars}){
     const [showDelete, setShowDelete] = useState(false)
     const [showUpdatePopup, setShowUpdatePopup] = useState(false)
 
@@ -12,7 +12,7 @@ function InventoryCarCard({primary_name, secondary_name, price, image, callDelet
     
     return(
         <div className='inventorycarcard'>
-                {showUpdatePopup && <UpdateVehicle setShowUpdatePopup={setShowUpdatePopup}/>}
+                {showUpdatePopup && <UpdateVehicle setShowUpdatePopup={setShowUpdatePopup} updateID={updateID} updateindex={updateindex} inventorycars={inventorycars} setInventoryCars={setInventoryCars}/>}
                 {showDelete && <InventoryDeletePopUp setShowDelete={setShowDelete} callDeleteFunction={callDeleteFunction}/>}
                 <div className='inventoryvehicle'>
                     <div className='inventoryvehicleimage' style={{
@@ -46,6 +46,7 @@ function InventoryPropertyCard(){
 export default function Inventory() {
     const [showAddNewPopup, setShowAddNewPopup] = useState(false)
     const [inventorycars, setInventoryCars] = useState([])
+    console.log(inventorycars)
     useEffect(()=>{
         fetch('http://127.0.0.1:8000/cars/car')
         .then(res => res.json())
@@ -65,6 +66,8 @@ export default function Inventory() {
         })
         .catch(err => console.log(err))
     }
+
+
 
      
   return (
@@ -97,6 +100,10 @@ export default function Inventory() {
             {inventorycars.map((inventorycar,index) => {
                 return <InventoryCarCard 
                     key={inventorycar.id}
+                    inventorycars={inventorycars}
+                    setInventoryCars = {setInventoryCars}
+                    updateindex={index}
+                    updateID={inventorycar.id}
                     image= {inventorycar.image}
                     primary_name={inventorycar.primary_name}
                     secondary_name= {inventorycar.secondary_name}
