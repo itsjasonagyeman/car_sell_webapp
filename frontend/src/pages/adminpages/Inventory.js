@@ -1,26 +1,30 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Inventory.css'
 import InventoryDeletePopUp from '../../components/inventory_components/InventoryDeletePopUp'
 import AddNewVehicle from '../../components/inventory_components/AddNewVehicle'
 import UpdateVehicle from '../../components/inventory_components/UpdateVehicle'
 
-function InventoryCarCard(){
+function InventoryCarCard({primary_name, secondary_name, price, image}){
     const [showDelete, setShowDelete] = useState(false)
     const [showUpdatePopup, setShowUpdatePopup] = useState(false)
+
+
     
     return(
         <div className='inventorycarcard'>
                 {showUpdatePopup && <UpdateVehicle setShowUpdatePopup={setShowUpdatePopup}/>}
                 {showDelete && <InventoryDeletePopUp setShowDelete={setShowDelete}/>}
                 <div className='inventoryvehicle'>
-                    <div className='inventoryvehicleimage'></div>
+                    <div className='inventoryvehicleimage' style={{
+                        backgroundColor: image
+                    }}></div>
                     <div className='inventoryvehicleinfo'>
-                        <div className='inventoryvehicleprimaryname'>Ferrari</div>
-                        <div className='inventoryvehiclesecondaryname'>Ferraririr</div>
+                        <div className='inventoryvehicleprimaryname'>{primary_name}</div>
+                        <div className='inventoryvehiclesecondaryname'>{secondary_name}</div>
                     </div>
                 </div>
                 <div className='inventorystatus'>AVAILABLE</div>
-                <div className='inventoryprice'>$3000</div>
+                <div className='inventoryprice'>${price}</div>
                 <div className='inventorycategory'>Supercar</div>
                 <div className='inventoryactions'>
                     <div className='inventoryupdate' onClick={()=> {setShowUpdatePopup(true)}}>UPDATE</div>
@@ -41,10 +45,17 @@ function InventoryPropertyCard(){
 
 export default function Inventory() {
     const [showAddNewPopup, setShowAddNewPopup] = useState(false)
+    const [inventorycars, setInventoryCars] = useState([])
+    useEffect(()=>{
+        fetch('http://127.0.0.1:8000/cars/car')
+        .then(res => res.json())
+        .then(data => setInventoryCars(data))
+        .catch(err => console.log(err))
+    }, [])
      
   return (
     <div className='maininventorybody'>
-        {showAddNewPopup && <AddNewVehicle setShowAddNewPopup={setShowAddNewPopup}/>}
+        {showAddNewPopup && <AddNewVehicle setShowAddNewPopup={setShowAddNewPopup} setInventoryCars ={setInventoryCars}/>}
         
         <div className='inventoryheaderdiv'>
             <div className='inventorypagetitle'>
@@ -69,7 +80,15 @@ export default function Inventory() {
                 <div className='actionsheader'>ACTIONS</div>
             </div>
 
-            <InventoryCarCard/>
+            {inventorycars.map((inventorycar,index) => {
+                return <InventoryCarCard 
+                    key={inventorycar.id}
+                    image= {inventorycar.image}
+                    primary_name={inventorycar.primary_name}
+                    secondary_name= {inventorycar.secondary_name}
+                    price={inventorycar.price}
+                />
+            })}
         </div>
         <div className='inventoryresultsdiv'>
             <div className='showingresults'>Showing 1 to 4 of 32 results</div>
@@ -83,6 +102,7 @@ export default function Inventory() {
         </div>
 
         <div className='inventorypropertiesdiv'>
+            
             <InventoryPropertyCard/>
             <InventoryPropertyCard/>
             <InventoryPropertyCard/>

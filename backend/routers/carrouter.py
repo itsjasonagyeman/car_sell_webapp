@@ -23,6 +23,7 @@ def get_cars(db: Session = Depends(get_db)):
 def get_carts(db: Session = Depends(get_db)):
     return db.query(CartDBModel).all()
 
+
 @router.get('/car/{id}')
 def get_car(id: int, db: Session = Depends(get_db)):
     car = db.query(CarDBModel).filter(CarDBModel.id == id).first()
@@ -35,6 +36,7 @@ def get_cart(id: int, db: Session = Depends(get_db)):
     if not cart:
         return {'message': 'Cart not found'}
     return cart
+
 
 @router.post('/car')
 def create_car(car: CarSchema, db: Session = Depends(get_db)):
@@ -51,6 +53,8 @@ def create_car(cart: CartSchema, db: Session = Depends(get_db)):
     db.commit()
     db.refresh(new_cart)
     return new_cart
+
+
 
 @router.delete('/car/{id}')
 def delete_car(id: int ,db: Session = Depends(get_db)):
@@ -73,3 +77,4 @@ def delete_car(id: int ,db: Session = Depends(get_db)):
     db.delete(cart)
     db.commit()
     return {'message':'Cart deleted'}
+

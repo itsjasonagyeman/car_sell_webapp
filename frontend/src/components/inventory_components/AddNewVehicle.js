@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './AddNewVehicle.css'
 
-export default function AddNewVehicle({setShowAddNewPopup}) {
+export default function AddNewVehicle({setShowAddNewPopup, setInventoryCars}) {
     const [formData, setFormData] = useState({
         primaryname : '',
         secondaryname: '',
@@ -13,6 +13,29 @@ export default function AddNewVehicle({setShowAddNewPopup}) {
         engine: '',
         image: '',
     })
+    function addToInventory(){
+        fetch(`http://127.0.0.1:8000/cars/car`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                primary_name: formData.primaryname,
+                secondary_name: formData.secondaryname,
+                sale_type: formData.saletype,
+                price: Number(formData.price),
+                speed: Number(formData.speed),
+                engine_type: formData.enginetype,
+                gear_type: formData.geartype,
+                engine: formData.engine,
+                image: formData.image
+            })
+        })
+        .then(res => res.json())
+        .then(newCar => {
+            setInventoryCars(prev => [...prev, newCar])
+            setShowAddNewPopup(false)})
+        .catch(err => console.log(err))
+
+    }
 
   return (
     <div className='addnewvehiclemainbody'>
@@ -70,7 +93,7 @@ export default function AddNewVehicle({setShowAddNewPopup}) {
                 ...formData,
                 image: e.target.value,
             })}/>
-            <div className='addnewvehicledone' onClick={()=>{setShowAddNewPopup(false)}}>DONE</div>
+            <div className='addnewvehicledone' onClick={()=>{addToInventory()}}>DONE</div>
         </div>
     </div>
   )
