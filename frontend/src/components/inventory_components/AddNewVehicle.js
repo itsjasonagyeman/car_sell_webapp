@@ -5,11 +5,11 @@ export default function AddNewVehicle({setShowAddNewPopup, setInventoryCars}) {
     const [formData, setFormData] = useState({
         primaryname : '',
         secondaryname: '',
-        saletype: '',
+        saletype: 'RENT',
         price: '',
         speed: '',
-        enginetype: '',
-        geartype:'',
+        enginetype: 'GAS',
+        geartype:'MANUAL',
         engine: '',
         image: '',
     })
@@ -60,11 +60,11 @@ export default function AddNewVehicle({setShowAddNewPopup, setInventoryCars}) {
                 <option value='RENT'>RENT</option>
                 <option value='SALE'>SALE</option>
             </select>
-            <input type='text' placeholder='PRICE' className='formtext' onChange={(e) => setFormData({
+            <input type='number' placeholder='PRICE' className='formtext' onChange={(e) => setFormData({
                 ...formData,
                 price: e.target.value,
             })}/>
-            <input type='text' placeholder='SPEED IN MPH' className='formtext' onChange={(e) => setFormData({
+            <input type='number' placeholder='SPEED IN MPH' className='formtext' onChange={(e) => setFormData({
                 ...formData,
                 speed: e.target.value,
             })}/>

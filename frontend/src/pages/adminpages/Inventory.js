@@ -34,11 +34,11 @@ function InventoryCarCard({primary_name, secondary_name, price, image, callDelet
     )
 }
 
-function InventoryPropertyCard(){
+function InventoryPropertyCard({figure, propertyname}){
     return(
         <div className='inventoryproperty'>
-                <div className='inventorypropertyfigure'>32</div>
-                <div className='inventorypropertyname'>Total Vehicles</div>
+                <div className='inventorypropertyfigure'>{figure}</div>
+                <div className='inventorypropertyname'>{propertyname}</div>
         </div>
     )
 }
@@ -125,10 +125,10 @@ export default function Inventory() {
 
         <div className='inventorypropertiesdiv'>
             
-            <InventoryPropertyCard/>
-            <InventoryPropertyCard/>
-            <InventoryPropertyCard/>
-            <InventoryPropertyCard/>
+            <InventoryPropertyCard figure={inventorycars.length} propertyname='TOTAL VEHICLE(S)'/>
+            <InventoryPropertyCard figure='24' propertyname='ACTIVE FLEET'/>
+            <InventoryPropertyCard figure='88%' propertyname='UTILIZATION RATE'/>
+            <InventoryPropertyCard figure='$124K' propertyname='MONTHLY REVENUE'/>
         </div>
     </div>
   )

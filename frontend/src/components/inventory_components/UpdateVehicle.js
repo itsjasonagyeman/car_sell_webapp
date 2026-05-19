@@ -68,11 +68,11 @@ export default function UpdateVehicle({setShowUpdatePopup, updateID, inventoryca
                 <option value='RENT'>RENT</option>
                 <option value='SALE'>SALE</option>
             </select>
-            <input type='text' placeholder='PRICE' className='formtext' value ={formData.price} onChange={(e)=> setFormData(prev => ({
+            <input type='number' placeholder='PRICE' className='formtext' value ={formData.price} onChange={(e)=> setFormData(prev => ({
                 ...prev,
                 price: e.target.value
             }))}/>
-            <input type='text' placeholder='SPEED IN MPH' className='formtext' value ={formData.speed} onChange={(e)=> setFormData(prev => ({
+            <input type='number' placeholder='SPEED IN MPH' className='formtext' value ={formData.speed} onChange={(e)=> setFormData(prev => ({
                 ...prev,
                 speed: e.target.value
             }))}/>

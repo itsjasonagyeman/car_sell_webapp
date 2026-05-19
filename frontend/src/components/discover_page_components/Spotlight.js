@@ -8,7 +8,7 @@ export default function Spotlight() {
     useEffect(()=> {
         fetch('http://127.0.0.1:8000/cars/car')
         .then(res => res.json())
-        .then(data => setCar(data[1]))
+        .then(data => setCar(data[0]))
         .catch(err => console.log(err))
     }, [])
 
